@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+<title>Document</title>
+</head>
+<body>
+    <video id="video_background" autoplay muted loop width="100%">
+        <source src="assets/Nature - 31377.mp4" type="video/mp4"></source> 
+    </video>
+    <div class="container">
+        <header class="header">
+            <h1>Dalida's Music Player</h1>
+        </header>
+            <div class="playpause_track" id="playpause_track_btn" onclick="playPause()"><i class="fa fa-play-circle fa-5x"></i></div>
+          <audio src="assets/Мирас Жугунусов - Зымыран.mp3" id="audio"></audio>
+    </div>
+</body>
+<script>
+    const playPauseBtn = document.getElementById('playpause_track_btn');
+    const audio = document.getElementById('audio');
+    const video = document.getElementById('video_background')
+
+    function playPause() {
+        if(video.paused) {
+            video.play();
+            audio.play();
+            playPauseBtn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
+        } else {
+            video.pause();
+            audio.pause();
+            playPauseBtn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
+        }
+    }
+
+</script>
+</html>
